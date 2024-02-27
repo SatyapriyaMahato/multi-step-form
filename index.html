@@ -1,52 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
   <title>Frontend Mentor | Multi-step form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
+
 <body>
 
   <!-- Sidebar start -->
 
-  Step 1
-  Your info
+  <main class="container">
+    <!-- Sign-up form start -->
+    <div id="newsLetter" class="div_newsletter">
 
-  Step 2
-  Select plan
+      <div class="left">
+        <picture>
+          <source media="(max-width: 400px)" srcset="assets\images\bg-sidebar-mobile.svg">
+          <img class="illustration" src="assets\images\bg-sidebar-desktop.svg" alt="illustration"
+            aria-label="illustration">
+        </picture>
+        <div class="steps">
+          <div class="step">
+            <div class="number">1</div>
+            <div class="detail">
+              <p>STEP 1</p>
+              <H2>YOUR INFO</H2>
+            </div>
+          </div>
+          <div class="step">
+            <div class="number done">2</div>
+            <div class="detail">
+              <p>STEP 2</p>
+              <H2>SELECT PLAN</H2>
+            </div>
+          </div>
+          <div class="step">
+            <div class="number">3</div>
+            <div class="detail">
+              <p>STEP 3</p>
+              <H2>ADD-ONS</H2>
+            </div>
+          </div>
+          <div class="step">
+            <div class="number">4</div>
+            <div class="detail">
+              <p>STEP 4</p>
+              <H2>SUMMARY</H2>
+            </div>
+          </div>
 
-  Step 3
-  Add-ons
+        </div>
 
-  Step 4
-  Summary
+      </div>
+
+      <div class="right">
+
+        <h1 class="main_heading">Personal info</h1>
+        <p class="heading_description">Please provide your name, email address, and phone number.</p>
+
+
+        <form id="form" action="/">
+
+          <div class="div_labels">
+            <label>Name</label>
+          </div>
+          <input class="input-control" id="user_name" type="text" placeholder="e.g. Stephen King" />
+
+
+          <div class="div_labels">
+            <label>Email address</label>
+            <label id="label_EmailError">Valid email required</label>
+          </div>
+          <input class="input-control" id="user_email" type="text" placeholder="e.g. stephenking@lorem.com" />
+
+          <div class="div_labels">
+            <label>Phone Number</label>
+            <label id="label_PhoneError">This field is required</label>
+          </div>
+          <input class="input-control" id="user_phone" type="text" placeholder="e.g. +1 234 567 890" />
+
+          <button class="btn" type="submit">Next Step</button>
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- 
+        
+        <ul class="uo_list">
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li> much more!</li>
+        </ul>
+        
+
+      </div>
+
+
+    </div>
+
+    Sign-up form end -->
+
+        <!-- Success message start -->
+        <!-- <div id="div_success" class="div_success">
+          <img src="./assets/images/icon-success.svg" alt="success icon" aria-label="success icon" width="30">
+          <h1>Thanks for subscribing!</h1>
+          <p>A confirmation email has been sent to ash@loremcompany.com.
+            Please open it and click the button inside to confirm your subscription.</p>
+          <button id="dismissBtn" class="btn" onclick="window.location.reload();" type="submit"> Dismiss
+            message</button>
+        </div> -->
+
+        <!-- Success message end -->
+
+  </main>
+
+
 
   <!-- Sidebar end -->
 
   <!-- Step 1 start -->
 
-  Personal info
-  Please provide your name, email address, and phone number.
 
-  Name
-  e.g. Stephen King
-
-  Email Address
-  e.g. stephenking@lorem.com
-
-  Phone Number
-  e.g. +1 234 567 890
-
-  Next Step
 
   <!-- Step 1 end -->
 
@@ -112,15 +204,16 @@
 
   Thank you!
 
-  Thanks for confirming your subscription! We hope you have fun 
-  using our platform. If you ever need support, please feel free 
+  Thanks for confirming your subscription! We hope you have fun
+  using our platform. If you ever need support, please feel free
   to email us at support@loremgaming.com.
 
   <!-- Step 5 end -->
-  
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
 </html>
