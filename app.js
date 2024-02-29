@@ -1,8 +1,10 @@
 const emailId = document.getElementById('user_email'),
-    form = document.getElementById('form'),
-    userPhone = document.getElementById('user_phone');
+    userPhone = document.getElementById('user_phone'),
+    prevBtn = document.getElementById('prev_btn'),
+    nextBtn = document.getElementById('next_btn'),
+    form = document.getElementById('form_container');
 
-form.addEventListener('submit', e => {
+nextBtn.addEventListener('click', e => {
     const emailText = emailId.value.trim();
     e.preventDefault();
     if (validateEmail(emailText)) {
@@ -16,8 +18,8 @@ form.addEventListener('submit', e => {
 
 });
 function setSuccess() {
-    const frontPage = document.getElementById('newsLetter');
-    frontPage.style.display = "none";
+    const form = document.getElementById('form_container');
+    form.style.display = "none";
     success_div = document.getElementById('div_success');
     success_div.style.display = "block";
 }

@@ -64,42 +64,33 @@
       </div>
 
       <div class="right">
+        <div id="form_container">
+          <h1 class="main_heading">Personal info</h1>
+          <p class="heading_description">Please provide your name, email address, and phone number.</p>
 
-        <h1 class="main_heading">Personal info</h1>
-        <p class="heading_description">Please provide your name, email address, and phone number.</p>
+          <form id="form" action="/">
+            <div class="div_labels">
+              <label>Name</label>
+            </div>
+            <input class="input-control" id="user_name" type="text" placeholder="e.g. Stephen King" />
+            <div class="div_labels">
+              <label>Email address</label>
+              <label id="label_EmailError">Valid email required</label>
+            </div>
+            <input class="input-control" id="user_email" type="text" placeholder="e.g. stephenking@lorem.com" />
 
+            <div class="div_labels">
+              <label>Phone Number</label>
+              <label id="label_PhoneError">This field is required</label>
+            </div>
+            <input class="input-control" id="user_phone" type="text" placeholder="e.g. +1 234 567 890" />
 
-        <form id="form" action="/">
-
-          <div class="div_labels">
-            <label>Name</label>
-          </div>
-          <input class="input-control" id="user_name" type="text" placeholder="e.g. Stephen King" />
-
-
-          <div class="div_labels">
-            <label>Email address</label>
-            <label id="label_EmailError">Valid email required</label>
-          </div>
-          <input class="input-control" id="user_email" type="text" placeholder="e.g. stephenking@lorem.com" />
-
-          <div class="div_labels">
-            <label>Phone Number</label>
-            <label id="label_PhoneError">This field is required</label>
-          </div>
-          <input class="input-control" id="user_phone" type="text" placeholder="e.g. +1 234 567 890" />
-
-          <button class="btn" type="submit">Next Step</button>
-        </form>
-
-
-
-
-
-
-
-
-
+          </form>
+        </div>
+        <div class="right_bottom">
+          <button id="prev_btn" class="btn prev" type="submit">Go back</button>
+          <button id="next_btn" class="btn next" type="submit">Next Step</button>
+        </div>
 
 
         <!-- 
