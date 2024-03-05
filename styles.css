@@ -42,6 +42,12 @@ h1 {
     color: var(--Marine-blue);
 }
 
+h3 {
+    font-weight: 700;
+    color: var(--Marine-blue);
+
+}
+
 P {
     font-size: 1.4rem;
     color: var(--Cool-gray);
@@ -86,6 +92,10 @@ li {
 .right {
     width: 70%;
     padding: 45px 100px 20px 100px;
+}
+
+#step_1 {
+    display: none;
 }
 
 .main_heading {
@@ -135,6 +145,84 @@ input[type=text]:focus {
 
     border: 2px solid var(--Marine-blue);
 
+}
+
+.plans {
+    display: flex;
+    justify-content: space-between;
+}
+
+.plan {
+    width: 30%;
+    border: 2px solid var(--Cool-gray);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.plan img {
+    margin-bottom: 40px;
+}
+
+.plan h3 {
+    margin: 10px 0;
+}
+
+.renewal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    text-align: center;
+    background: var(--Magnolia);
+    margin: 50px 0;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.switch {
+    display: inline-block;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch label {
+    display: block;
+    width: 40px;
+    height: 20px;
+    padding: 3px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: var(--Marine-blue);
+}
+
+.switch label::after {
+    content: "";
+    display: inherit;
+    width: 13px;
+    height: 13px;
+    border-radius: 12px;
+    background: #ffffff;
+    transition: 0.3s;
+}
+
+
+.switch input:checked~label::after {
+    translate: 22px 0;
+    background: #ffffff;
+}
+
+.renewal p {
+    font-weight: 700;
+    ;
+    transition: color 0.3s;
+}
+
+.renewal p:first-child {
+    color: var(--Marine-blue);
 }
 
 .right_bottom {
