@@ -230,6 +230,42 @@ input[type=text]:focus {
     justify-content: space-between;
 }
 
+#step_2 {
+    display: none;
+}
+
+
+.add_on {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid var(--Pastel-blue);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.add_on div {
+    width: 70%;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.add_on div h3 {
+    font-size: 1.5rem;
+}
+
+.add_on input {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    border-radius: 2px;
+    accent-color: var(--Purplish-blue);
+    border: 2px solid red;
+}
+
 .btn {
     outline: none;
     width: 125px;
