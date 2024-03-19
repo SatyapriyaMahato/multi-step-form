@@ -78,7 +78,7 @@ li {
 
 }
 
-.div_newsletter {
+.div_msf {
     display: flex;
     justify-content: space-between;
     background-color: var(--White);
@@ -92,11 +92,15 @@ li {
 .right {
     width: 70%;
     padding: 45px 100px 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 
-#step_1 {
+/* #step_1 {
     display: none;
-}
+} */
 
 .main_heading {
     margin-bottom: 2rem;
@@ -154,10 +158,16 @@ input[type=text]:focus {
 
 .plan {
     width: 30%;
-    border: 2px solid var(--Cool-gray);
+    border: 1px solid var(--Pastel-blue);
     border-radius: 10px;
     padding: 15px;
 }
+
+.plan:hover {
+    cursor: pointer;
+    border-color: var(--Marine-blue);
+}
+
 
 .plan img {
     margin-bottom: 40px;
@@ -228,33 +238,57 @@ input[type=text]:focus {
 .right_bottom {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
-#step_2 {
+/* #step_2 {
     display: none;
-}
+} */
 
 
 .add_on {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid var(--Pastel-blue);
+    border: 1px solid var(--Light-gray);
     border-radius: 10px;
     margin-bottom: 20px;
     padding: 20px;
 }
 
+.add_on p {
+    color: var(--Purplish-blue);
+}
+
+.add_on:hover {
+    border-color: var(--Purplish-blue);
+    cursor: pointer;
+}
+
+.active {
+    border: 1px solid var(--Purplish-blue);
+
+}
+
 .add_on div {
     width: 70%;
-    height: 35px;
     display: flex;
+    gap: 2px;
     flex-direction: column;
     justify-content: space-between;
 }
 
+.add_on div p {
+    color: var(--Cool-gray);
+}
+
 .add_on div h3 {
     font-size: 1.5rem;
+}
+
+.add_on p:nth-last-child() {
+    color: red;
+
 }
 
 .add_on input {
@@ -263,7 +297,42 @@ input[type=text]:focus {
     margin: 0;
     border-radius: 2px;
     accent-color: var(--Purplish-blue);
-    border: 2px solid red;
+}
+
+/* #step_3 {
+    display: none;
+} */
+
+.bill {
+    background-color: var(--Magnolia);
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+.selected_plan,
+.selected_addOns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selected_plan p {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--Marine-blue);
+}
+
+.selected_plan span {
+    font-size: 1.5rem;
+    color: var(--Cool-gray);
+}
+
+.addOn_price {
+    color: var(--Marine-blue);
 }
 
 .btn {
@@ -280,6 +349,7 @@ input[type=text]:focus {
 }
 
 .btn:hover {
+    cursor: pointer;
     filter: brightness(1.5);
 }
 
@@ -290,6 +360,7 @@ input[type=text]:focus {
 }
 
 .prev:hover {
+    cursor: pointer;
     color: var(--Marine-blue);
 }
 
@@ -347,6 +418,26 @@ input[type=text]:focus {
     letter-spacing: 2px;
 }
 
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+#total_amount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--Purplish-blue);
+}
+
+#step_5 {
+    text-align: center;
+}
+
+#step_5 h1 {
+    margin: 35px 0 20px 0;
+}
+
 .hidden {
     display: none;
 }
@@ -365,6 +456,7 @@ input[type=text]:focus {
     .container {
         width: 100vw;
         height: auto;
+
     }
 
     body {
@@ -380,6 +472,8 @@ input[type=text]:focus {
         border-radius: 20px;
         z-index: 2;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        flex-direction: column;
+        margin-bottom: 5rem;
     }
 
     .main_heading {
@@ -394,7 +488,7 @@ input[type=text]:focus {
         font-size: 1.5rem;
     }
 
-    .div_newsletter {
+    .div_msf {
         flex-direction: column;
         padding: 0;
         margin: 0;
