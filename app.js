@@ -2,7 +2,29 @@ const emailId = document.getElementById('user_email'),
     userPhone = document.getElementById('user_phone'),
     nextBtn = document.getElementById('next_btn'),
     prevBtn = document.getElementById('prev_btn'),
-    form = document.getElementById('step_1');
+    form = document.getElementById('step_1'),
+    plan = document.querySelectorAll('.plan');
+
+let count = 0;
+let className;
+
+function selectedPlan() {
+    plan.forEach(p => {
+        p.style.borderColor = "var(--Pastel-blue)";
+        p.style.background = "none"
+    })
+}
+
+
+plan.forEach(p => {
+    p.addEventListener('click', e => {
+        selectedPlan();
+        let className = e.target.closest('.plan');
+        className.style.borderColor = "var(--Marine-blue)";
+        className.style.background = "var(--Magnolia)";
+    })
+})
+
 
 nextBtn.addEventListener('click', e => {
     const emailText = emailId.value.trim();
@@ -15,8 +37,14 @@ nextBtn.addEventListener('click', e => {
     if (userPhone.textContent == "") {
         setPhoneError();
     }
+    hidePrev(step);
 
 });
+
+function hidePrev(s) {
+    const step = document.getElementById(`step_${s}`);
+    step.style.display = "none";
+}
 
 prevBtn.addEventListener('click', e => {
     form.style.display = "block";
@@ -44,6 +72,7 @@ const validateEmail = (email) => {
         );
 };
 
+// slider switch 
 
 const checkbox = document.getElementById('switch-rounded'),
     monthlyParagraph = document.querySelector('.renewal p:first-child'),
@@ -59,3 +88,25 @@ checkbox.addEventListener('change', e => {
 
     }
 });
+
+// add ons
+
+const add_ons = document.querySelectorAll(".add_on");
+
+add_ons.forEach(addOn => {
+    addOn.addEventListener('click', e => {
+        const closestAddOn = e.target.closest(".add_on");
+        const checkbox = closestAddOn.querySelector('input[type="checkbox"]');
+
+        if (closestAddOn && checkbox) {
+            checkbox.checked = !checkbox.checked;
+
+            if (checkbox.checked) {
+                closestAddOn.style.borderColor = "var(--Purplish-blue)";
+            } else {
+                closestAddOn.style.borderColor = "var(--Light-gray)";
+            }
+        }
+    });
+});
+
