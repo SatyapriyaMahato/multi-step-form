@@ -26,28 +26,28 @@
         </picture>
         <div class="steps">
           <div class="step">
-            <div class="number">1</div>
+            <div class="number_1 done">1</div>
             <div class="detail">
               <p>STEP 1</p>
               <H2>YOUR INFO</H2>
             </div>
           </div>
           <div class="step">
-            <div class="number done">2</div>
+            <div class="number_2">2</div>
             <div class="detail">
               <p>STEP 2</p>
               <H2>SELECT PLAN</H2>
             </div>
           </div>
           <div class="step">
-            <div class="number">3</div>
+            <div class="number_3">3</div>
             <div class="detail">
               <p>STEP 3</p>
               <H2>ADD-ONS</H2>
             </div>
           </div>
           <div class="step">
-            <div class="number">4</div>
+            <div class="number_4">4</div>
             <div class="detail">
               <p>STEP 4</p>
               <H2>SUMMARY</H2>
@@ -57,12 +57,13 @@
         </div>
       </div>
       <div class="right">
-        <div id="step_1" class="hidden">
+        <div id="step_1">
           <h1 class="main_heading">Personal info</h1>
           <p class="heading_description">Please provide your name, email address, and phone number.</p>
           <form id="form" action="/">
             <div class="div_labels">
               <label>Name</label>
+              <label id="label_NameError">This field is required</label>
             </div>
             <input class="input-control" id="user_name" type="text" placeholder="e.g. Stephen King" />
             <div class="div_labels">
@@ -72,26 +73,26 @@
             <input class="input-control" id="user_email" type="text" placeholder="e.g. stephenking@lorem.com" />
             <div class="div_labels">
               <label>Phone Number</label>
-              <label id="label_PhoneError">This field is required</label>
+              <label id="label_PhoneError">Valid Mobile Number is required</label>
             </div>
             <input class="input-control" id="user_phone" type="text" placeholder="e.g. +1 234 567 890" />
           </form>
         </div>
-        <div id="step_2">
+        <div id="step_2" class="hidden">
           <h1 class="main_heading">Select Your Plan</h1>
           <p class="heading_description">You have the option of monthly or yearly billing.</p>
           <div class="plans">
-            <div class="plan">
+            <div class="plan" data-value="9">
               <img src="./assets/images/icon-arcade.svg" alt="arcade_icon">
               <h3>Arcade</h3>
               <p>$9/mo</p>
             </div>
-            <div class="plan">
+            <div class="plan" data-value="12">
               <img src="./assets/images/icon-advanced.svg" alt="advanced_icon">
               <h3>Advanced</h3>
               <p>$12/mo</p>
             </div>
-            <div class="plan">
+            <div class="plan" data-value="15">
               <img src="./assets/images/icon-pro.svg" alt="pro_icon">
               <h3>Pro</h3>
               <p>$15/mo</p>
@@ -116,7 +117,7 @@
                 <h3>Online service</h3>
                 <p>Access to multiplayer games</p>
               </div>
-              <p>+$1/mo</p>
+              <p class="add_on_amount" data-value="1">+$1/mo</p>
             </div>
             <div class="add_on">
               <input type="checkbox">
@@ -124,7 +125,7 @@
                 <h3>Larger storage</h3>
                 <p>Extra 1TB of cloud save</p>
               </div>
-              <p>+$2/mo</p>
+              <p class="add_on_amount" data-value="2">+$2/mo</p>
             </div>
             <div class="add_on">
               <input type="checkbox">
@@ -132,10 +133,9 @@
                 <h3>Customizable Profile</h3>
                 <p>Custom theme on your profile</p>
               </div>
-              <p>+$2/mo</p>
+              <p class="add_on_amount" data-value="2">+$2/mo</p>
             </div>
           </div>
-
         </div>
         <div id="step_4" class="hidden">
           <h1 class="main_heading">Finishing up</h1>
@@ -149,26 +149,16 @@
                   Change
                 </span>
               </div>
-
               <p>$9/m</p>
-
             </div>
             <hr>
             <div class="selected_addOns">
-
               <p class="selected_addOn">Online Service</p>
-
-
               <p class="addOn_price">+$1/mo</p>
-
             </div>
             <div class="selected_addOns">
-
               <p class="selected_addOn">Online Service</p>
-
-
               <p class="addOn_price">+$1/mo</p>
-
             </div>
           </div>
           <div class="total">
@@ -184,11 +174,13 @@
             using our platform. If you ever need support, please feel free
             to email us at support@loremgaming.com.</p>
         </div>
+
         <div class="right_bottom">
           <button id="prev_btn" class="btn prev" type="submit">Go back</button>
           <button id="next_btn" class="btn next" type="submit">Next Step</button>
         </div>
       </div>
+    </div>
   </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
