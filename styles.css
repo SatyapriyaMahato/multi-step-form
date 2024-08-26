@@ -142,7 +142,7 @@ input {
 }
 
 input:hover {
-
+    cursor: pointer;
     border: 2px solid var(--Marine-blue);
 }
 
@@ -323,6 +323,7 @@ input[type=text]:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 1rem 0;
 }
 
 .selected_plan p {
@@ -426,6 +427,11 @@ input[type=text]:focus {
     letter-spacing: 2px;
 }
 
+.step_4_change_btn {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .total {
     display: flex;
     justify-content: space-between;
@@ -439,6 +445,7 @@ input[type=text]:focus {
 }
 
 #step_5 {
+    margin: auto;
     text-align: center;
 }
 

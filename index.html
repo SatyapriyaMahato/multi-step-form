@@ -111,61 +111,59 @@
           <h1 class="main_heading">Pick add-ons</h1>
           <p class="heading_description">Add-ons help enhance your gaming experience.</p>
           <div class="add_ons">
-            <div class="add_on">
-              <input type="checkbox">
+
+            <label class="add_on">
+              <input type="checkbox" data-value="1" data-info="Online service">
               <div class="detail">
                 <h3>Online service</h3>
                 <p>Access to multiplayer games</p>
               </div>
               <p class="add_on_amount" data-value="1">+$1/mo</p>
-            </div>
-            <div class="add_on">
-              <input type="checkbox">
+            </label>
+
+            <label class="add_on">
+              <input type="checkbox" data-value="2" data-info="Larger storage">
               <div class="detail">
                 <h3>Larger storage</h3>
                 <p>Extra 1TB of cloud save</p>
               </div>
               <p class="add_on_amount" data-value="2">+$2/mo</p>
-            </div>
-            <div class="add_on">
-              <input type="checkbox">
+            </label>
+
+            <label class="add_on">
+              <input type="checkbox" data-value="3" data-info="Customizable profile">
               <div class="detail">
                 <h3>Customizable Profile</h3>
                 <p>Custom theme on your profile</p>
               </div>
               <p class="add_on_amount" data-value="2">+$2/mo</p>
-            </div>
+            </label>
+
           </div>
         </div>
+
+
         <div id="step_4" class="hidden">
           <h1 class="main_heading">Finishing up</h1>
-          <p class="heading_description"> Double-check everything looks OK before confirming.
-          </p>
+          <p class="heading_description">Double-check everything looks OK before confirming.</p>
           <div class="bill">
             <div class="selected_plan">
               <div>
                 <p class="plan_name">Monthly</p>
-                <span>
-                  Change
-                </span>
+                <span class="step_4_change_btn" onclick="changeFunction()">Change</span>
               </div>
-              <p>$9/m</p>
+              <p class="monthly_plan">$9/mo</p>
             </div>
             <hr>
-            <div class="selected_addOns">
-              <p class="selected_addOn">Online Service</p>
-              <p class="addOn_price">+$1/mo</p>
-            </div>
-            <div class="selected_addOns">
-              <p class="selected_addOn">Online Service</p>
-              <p class="addOn_price">+$1/mo</p>
-            </div>
+            <div id="selected_addOns_container"></div>
           </div>
           <div class="total">
-            <p>Total(<span>per month</span>)</p>
-            <p id="total_amount">$12/mo</p>
+            <p>Total (<span>per month</span>)</p>
+            <p id="total_amount">$9/mo</p>
           </div>
         </div>
+
+
         <div id="step_5" class="hidden">
           <img src="./assets/images/icon-thank-you.svg" alt="thankyou_icon">
           <h1>Thank you!</h1>
