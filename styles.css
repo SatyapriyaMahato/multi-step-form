@@ -98,9 +98,6 @@ li {
     align-items: center;
 }
 
-/* #step_1 {
-    display: none;
-} */
 
 .main_heading {
     margin-bottom: 2rem;
@@ -252,17 +249,12 @@ input[type=text]:focus {
 
 .add_on {
     display: flex;
-    /* flex-direction: column; */
     justify-content: space-between;
     align-items: center;
     border: 1px solid var(--Light-gray);
     border-radius: 10px;
     margin-bottom: 20px;
     padding: 20px;
-}
-
-.add_on p {
-    color: var(--Purplish-blue);
 }
 
 .add_on:hover {
@@ -275,7 +267,7 @@ input[type=text]:focus {
 
 }
 
-.add_on div {
+.addOn_detail {
     width: 70%;
     display: flex;
     gap: 2px;
@@ -283,11 +275,20 @@ input[type=text]:focus {
     justify-content: space-between;
 }
 
-.add_on div p {
+.addOn_detail span {
     color: var(--Cool-gray);
+    margin-top: .4rem;
+    font-weight: 400;
+    font-size: 1.4rem;
 }
 
-.add_on div h3 {
+.add_on_amount {
+    font-weight: 400;
+    color: var(--Purplish-blue);
+}
+
+.addOn_detail strong {
+    color: var(--Marine-blue);
     font-size: 1.5rem;
 }
 
@@ -304,9 +305,6 @@ input[type=text]:focus {
     accent-color: var(--Purplish-blue);
 }
 
-/* #step_3 {
-    display: none;
-} */
 
 .bill {
     background-color: var(--Magnolia);
@@ -337,14 +335,10 @@ input[type=text]:focus {
     color: var(--Cool-gray);
 }
 
-.addOn_price {
-    color: var(--Marine-blue);
-}
-
 .btn {
     outline: none;
-    width: 125px;
-    height: 50px;
+    width: 12.5rem;
+    height: 5rem;
     margin-top: 45px;
     font-size: 1.3em;
     font-weight: 700;
@@ -418,6 +412,10 @@ input[type=text]:focus {
     border-color: var(--Pastel-blue);
 }
 
+.detail {
+    display: block;
+}
+
 .step .detail p {
     color: var(--Pastel-blue);
     margin-bottom: 4px;
@@ -467,7 +465,7 @@ input[type=text]:focus {
     color: hsl(228, 45%, 44%);
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 800px) {
     .container {
         width: 100vw;
         height: auto;
@@ -490,6 +488,16 @@ input[type=text]:focus {
         flex-direction: column;
         margin-bottom: 5rem;
     }
+
+
+    .right_bottom {
+        position: absolute;
+        bottom: 0rem;
+        padding: 1rem;
+        padding: 2rem;
+        background-color: var(--White);
+    }
+
 
     .main_heading {
         font-size: 3rem;
@@ -532,6 +540,7 @@ input[type=text]:focus {
     }
 
     .btn {
+        margin-top: 0;
         font-size: 1rem;
         height: 5em;
     }
@@ -540,6 +549,7 @@ input[type=text]:focus {
 
 
 .attribution {
+    margin-top: 10rem;
     font-size: 11px;
     text-align: center;
 }

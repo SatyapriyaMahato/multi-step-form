@@ -133,8 +133,6 @@ function updateSelectedAddOns(selectedAddOns, totalAddOnAmount) {
         `;
         selectedAddOnsContainer.appendChild(addOnElement);
     });
-
-    // Update the total amount
 }
 
 //---------------------- Step 4 ---------------------- //

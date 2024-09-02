@@ -10,9 +10,6 @@
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
   <title>Frontend Mentor | Multi-step form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-
 </head>
 
 <body>
@@ -20,8 +17,8 @@
     <div id="msf" class="div_msf">
       <div class="left">
         <picture>
-          <source media="(max-width: 400px)" srcset="assets\images\bg-sidebar-mobile.svg">
-          <img class="illustration" src="assets\images\bg-sidebar-desktop.svg" alt="illustration"
+          <source media="(max-width: 800px)" srcset="assets/images/bg-sidebar-mobile.svg">
+          <img class="illustration" src="assets/images/bg-sidebar-desktop.svg" alt="illustration"
             aria-label="illustration">
         </picture>
         <div class="steps">
@@ -65,17 +62,17 @@
               <label>Name</label>
               <label id="label_NameError">This field is required</label>
             </div>
-            <input class="input-control" id="user_name" type="text" placeholder="e.g. Stephen King" />
+            <input class="input-control" id="user_name" type="text" placeholder="e.g. Stephen King">
             <div class="div_labels">
               <label>Email address</label>
               <label id="label_EmailError">Valid email required</label>
             </div>
-            <input class="input-control" id="user_email" type="text" placeholder="e.g. stephenking@lorem.com" />
+            <input class="input-control" id="user_email" type="text" placeholder="e.g. stephenking@lorem.com">
             <div class="div_labels">
               <label>Phone Number</label>
               <label id="label_PhoneError">Valid Mobile Number is required</label>
             </div>
-            <input class="input-control" id="user_phone" type="text" placeholder="e.g. +1 234 567 890" />
+            <input class="input-control" id="user_phone" type="text" placeholder="e.g. +1 234 567 890">
           </form>
         </div>
         <div id="step_2" class="hidden">
@@ -101,7 +98,7 @@
           <div class="renewal">
             <p> Monthly</p>
             <span class="switch">
-              <input id="switch-rounded" type="checkbox" />
+              <input id="switch-rounded" type="checkbox">
               <label for="switch-rounded"></label>
             </span>
             <p> Yearly</p>
@@ -114,29 +111,29 @@
 
             <label class="add_on">
               <input type="checkbox" data-value="1" data-info="Online service">
-              <div class="detail">
-                <h3>Online service</h3>
-                <p>Access to multiplayer games</p>
-              </div>
-              <p class="add_on_amount" data-value="1">+$1/mo</p>
+              <span class="addOn_detail">
+                <strong>Online service</strong>
+                <span>Access to multiplayer games</span>
+              </span>
+              <span class="add_on_amount" data-value="1">+$1/mo</span>
             </label>
 
             <label class="add_on">
               <input type="checkbox" data-value="2" data-info="Larger storage">
-              <div class="detail">
-                <h3>Larger storage</h3>
-                <p>Extra 1TB of cloud save</p>
-              </div>
-              <p class="add_on_amount" data-value="2">+$2/mo</p>
+              <span class="addOn_detail">
+                <strong>Larger storage</strong>
+                <span>Extra 1TB of cloud save</span>
+              </span>
+              <span class="add_on_amount" data-value="2">+$2/mo</span>
             </label>
 
             <label class="add_on">
               <input type="checkbox" data-value="3" data-info="Customizable profile">
-              <div class="detail">
-                <h3>Customizable Profile</h3>
-                <p>Custom theme on your profile</p>
-              </div>
-              <p class="add_on_amount" data-value="2">+$2/mo</p>
+              <span class="addOn_detail">
+                <strong>Customizable Profile</strong>
+                <span>Custom theme on your profile</span>
+              </span>
+              <span class="add_on_amount" data-value="2">+$2/mo</span>
             </label>
 
           </div>
